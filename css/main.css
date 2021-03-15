@@ -1,0 +1,381 @@
+/* -------------- Global Style ------------- */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    color: #343434;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+
+
+}
+
+button a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+img {
+    width: 300px;
+}
+
+
+h1 {
+    font-size: 100px;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+h1,
+h2 {
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+    margin: 0;
+}
+
+.content-fixed {
+    max-width: 850px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+
+}
+
+.fab.fa-github {
+    color: #000;
+    font-size: 20px
+}
+
+.fab.fa-github:hover {
+    color: crimson;
+}
+
+
+button {
+    width: 230px;
+    height: 30px;
+    background: linear-gradient(to left top, #c32c71 50%, #b33771 50%);
+    border-style: none;
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    overflow: hidden;
+    transition: all .5s;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+}
+
+button span {
+    position: absolute;
+    display: block;
+}
+
+button span:nth-child(1) {
+    height: 3px;
+    width: 200px;
+    top: 0px;
+    left: -200px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), #f6e58d);
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span1 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes span1 {
+    0% {
+        left: -200px
+    }
+
+    100% {
+        left: 200px;
+    }
+}
+
+button span:nth-child(2) {
+    height: 70px;
+    width: 3px;
+    top: -70px;
+    right: 0px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #f6e58d);
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span2 2s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes span2 {
+    0% {
+        top: -70px;
+    }
+
+    100% {
+        top: 70px;
+    }
+}
+
+button span:nth-child(3) {
+    height: 3px;
+    width: 200px;
+    right: -200px;
+    bottom: 0px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), #f6e58d);
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    animation: span3 2s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes span3 {
+    0% {
+        right: -200px;
+    }
+
+    100% {
+        right: 200px;
+    }
+}
+
+button span:nth-child(4) {
+    height: 70px;
+    width: 3px;
+    bottom: -70px;
+    left: 0px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), #f6e58d);
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px;
+    animation: span4 2s linear infinite;
+    animation-delay: 4s;
+}
+
+@keyframes span4 {
+    0% {
+        bottom: -70px;
+    }
+
+    100% {
+        bottom: 70px;
+    }
+}
+
+button:hover {
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, .4);
+}
+
+button:hover span {
+    animation-play-state: paused;
+}
+
+
+
+
+/* -------------- Profile ------------- */
+
+header {
+    background: #2F3061;
+    color: #F7FFF7;
+}
+
+
+/* -------------- Projects ------------- */
+
+.projects {
+    background: #F7FFF7;
+}
+
+
+.projects-item {
+    overflow: hidden;
+    border-bottom: thick double #343434;
+    padding: 25px 0;
+}
+
+.content-fixed > section:last-of-type {
+    border-bottom: none;
+}
+
+.projects-item h3 {
+    margin-top: 0;
+}
+
+.details h3 + p {
+    font-style: italic;
+}
+
+.details h3 ~ p {
+    margin: 0;
+}
+
+
+
+/* -------------- Knowledge  ------------- */
+
+.t-knowledge {
+    background: #A1C6D7;
+}
+
+
+
+/* -------------- Education ------------- */
+
+.edu {
+    background-image: url(../img/educationpic.jpg);
+    background-size: cover;
+    background-position: top right;
+    padding-bottom: 100px;
+}
+
+
+/* -------------- Contant Info ------------- */
+
+footer {
+    background: #343434;
+    color: #F7FFF7;
+}
+
+.contact-list {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+.contact-list a {
+    padding: 20px;
+    display: inline-block;
+}
+
+.far.fa-envelope {
+    color: #ff8c00;
+}
+
+.fab.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fab.fa-linkedin {
+    color: #2867B2;
+}
+
+.fab.fa-youtube {
+    color: #FF0000;
+}
+
+.fab.fa-facebook-f {
+    color: #4267B2;
+}
+
+.fas.fa-phone-volume {
+    color: #ff6666;
+}
+
+.far.fa-envelope:hover {
+    color: #00ffff;
+}
+
+.fab.fa-twitter:hover {
+    color: #ff66cc;
+}
+
+.fab.fa-linkedin:hover {
+    color: #00ccff;
+}
+
+.fab.fa-youtube:hover {
+    color: #000000;
+}
+
+.fab.fa-facebook-f:hover {
+    color: #0099ff;
+}
+
+.fas.fa-phone-volume:hover {
+    color: #00fa9a;
+}
+
+
+/* -------------- Responsive ------------- */
+
+@media screen and (min-width:1008px) {
+
+    header,
+    footer {
+        text-align: center;
+    }
+
+    .projects-item img {
+        float: left;
+        margin-right: 20px;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width:1007px) {
+    
+    
+    .edu {
+        background-position: center;
+    }
+
+    h1 {
+        font-size: 75px;
+        line-height: 0.9;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        line-height: 1;
+    }
+
+    .far.fa-envelope {
+        font-size: 35px;
+    }
+
+    .fab.fa-twitter {
+        font-size: 35px;
+    }
+
+    .fab.fa-linkedin {
+        font-size: 35px;
+    }
+
+    .fab.fa-youtube {
+        font-size: 35px;
+    }
+
+    .fab.fa-facebook-f {
+        font-size: 35px;
+    }
+
+    .fas.fa-phone-volume {
+        font-size: 35px;
+    }
+
+}
